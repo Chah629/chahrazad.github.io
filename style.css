@@ -1,0 +1,274 @@
+/* Importation des polices depuis Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@400;700&display=swap');
+
+/* Style global */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fefbf6;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: #faab62;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3rem;
+    font-family: 'Merriweather', serif;
+}
+
+nav {
+    background-color: #f77931;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f5ed83;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #864586;
+    transform: scale(1.05);
+}
+
+/* Sections générales */
+section {
+    padding: 40px 20px;
+    margin: 40px auto;
+    max-width: 1200px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Classe - page spécifique */
+.classe-section {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.classe-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.classe-header h2 {
+    font-size: 2.5rem;
+    color: #ecc24e;
+    font-family: 'Merriweather', serif;
+}
+
+.classe-header p {
+    font-size: 1.1rem;
+    color: #f17272;
+}
+
+.classe-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.devoirs, .annonces, .discussion {
+    background-color: #f7f1fb;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.devoirs:hover, .annonces:hover, .discussion:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.devoirs h3, .annonces h3, .discussion h3 {
+    color: #eea94e;
+    margin-bottom: 20px;
+    font-family: 'Merriweather', serif;
+}
+
+.devoirs ul, .annonces ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.devoirs li, .annonces li {
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.date-devoir {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+textarea {
+    width: 100%;
+    height: 120px;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #fafafa;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+}
+
+button {
+    background-color: #cf76f1;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff9a57;
+    transform: scale(1.05);
+}
+
+/* Section pour les messages de discussion */
+.messages {
+    margin-top: 20px;
+}
+
+.message {
+    padding: 12px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+footer a {
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #fcd12a;
+}
+
+/* AOS animation helper */
+[data-aos] {
+    transition: all 0.8s ease-in-out;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+[data-aos].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Effets de survol pour les emails de contact avec animation */
+.contact-email {
+    color: #ddab4e;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-email:hover {
+    color: #ff9a57;
+    transform: translateY(-5px);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact-email:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #fcd12a;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.contact-email:hover:before {
+    transform: scaleX(1);
+}
+
+/* Style pour les liens (emails) */
+.contact-links a {
+    text-decoration: none;
+    color: #e6a24a;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Animation sur survol des liens */
+.contact-links a:hover {
+    color: #ff9a57;
+    transform: scale(1.1);
+}
+
+.contact-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fcd12a;
+    transition: width 0.3s ease;
+}
+
+.contact-links a:hover::after {
+    width: 100%;
+}
